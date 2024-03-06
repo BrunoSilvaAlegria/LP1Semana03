@@ -12,9 +12,23 @@ namespace ChangeString
 
             //Asks the user for a character
             Console.Write("Please choose a character: >");
-            string ch = Console.ReadLine();
+            char letter = Console.ReadLine()[0];
 
-            
+            //Scroll character by character through the string
+            foreach (char ch in str)
+            {
+                //Detects if the character is equal to the one given by the user
+                //If true, replaces the character for X
+                if (ch == letter)
+                {
+                    Console.Write('X');
+                }
+                //If false, just writes the normal character  
+                else
+                {
+                    Console.Write(ch);
+                }
+            }    
         }
     }
 }
