@@ -5,7 +5,8 @@ namespace RightSize
     class Program
     {
         static void Main(string[] args)
-        {
+        {   
+            //Detects the arguments provided by the user in the command line
             foreach (string str in args)
             {//Prints words with more than 3 characters and 
              //less/equal to 6 characters
