@@ -12,7 +12,7 @@ namespace ChangeString
 
             //Asks the user for a character
             Console.Write("Please choose a character: >");
-            char letter = Console.ReadLine()[0];
+            char letter = char.Parse(Console.ReadLine());
 
             //Scroll character by character through the string
             foreach (char ch in str)
