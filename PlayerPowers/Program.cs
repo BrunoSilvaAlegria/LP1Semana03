@@ -24,7 +24,7 @@ namespace PlayerPowers
 
             //
             for (int i = 0; i < array.Length; i++)
-            {
+            {   //Players choose their powers
                 Console.WriteLine("Powers: Fly, XRayVision, SuperStrength.");
                 while (true)
                 {
@@ -53,7 +53,7 @@ namespace PlayerPowers
 
                     else
                     {
-                        //If none of the options below is used, then it'll print this
+                        //If none of the options are used, then it'll print this
                         Console.WriteLine("Unknown perk!");
                         return;
                     }
@@ -75,10 +75,11 @@ namespace PlayerPowers
             }
 
             for (int i = 0; i < array.Length; i++)
-            {
-                Console.Write($"O {i + 1}ª Player tem: {array[i]}");
-                if ((array[i] & PlayerPowers.SuperStrength) == PlayerPowers.SuperStrength
-                && (array[i] & PlayerPowers.Fly) == PlayerPowers.Fly)
+            {   //Special case
+                Console.Write($"Player {i + 1} has: {array[i]}");
+                if ((array[i] & PlayerPowers.SuperStrength) == 
+                PlayerPowers.SuperStrength && (array[i] & PlayerPowers.Fly) == 
+                PlayerPowers.Fly)
                 {
                     Console.Write(", Flying radiation");
                 }
